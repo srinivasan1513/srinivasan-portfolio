@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Studio | Srinivasan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: #f5f0e7;
+      background:
+        radial-gradient(ellipse at top, #211b13 0%, #0a0a0f 55%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 25px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ffffff18;
+    }
+
+    .brand {
+      color: #d4af37;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    .back-link {
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 75px 20px 45px;
+    }
+
+    .eyebrow {
+      color: #d4af37;
+      font-size: 11px;
+      letter-spacing: 5px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 68px);
+      letter-spacing: -2px;
+    }
+
+    .subtitle {
+      color: #aaa39a;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    .gallery {
+      width: min(1100px, 88%);
+      margin: 35px auto 100px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 35px;
+      perspective: 1200px;
+    }
+
+    .logo-card {
+      min-height: 300px;
+      position: relative;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(145deg, #211f1a, #0e0e11 75%);
+      border: 1px solid #d4af374d;
+      border-radius: 18px;
+      box-shadow:
+        0 18px 30px #0008,
+        inset 0 1px 0 #ffffff12;
+      transform-style: preserve-3d;
+      transition: transform 0.45s ease, border-color 0.45s ease,
+                  box-shadow 0.45s ease;
+      overflow: hidden;
+    }
+
+    .logo-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, #d4af371b, transparent 65%);
+      pointer-events: none;
+    }
+
+    .logo-card:hover {
+      transform: rotateX(5deg) rotateY(-7deg) translateY(-10px);
+      border-color: #d4af37;
+      box-shadow: 0 30px 50px #000b, 0 0 25px #d4af3718;
+    }
+
+    .number {
+      align-self: flex-start;
+      color: #d4af37;
+      font-size: 11px;
+      letter-spacing: 2px;
+      transform: translateZ(25px);
+    }
+
+    .logo-image {
+      width: 100%;
+      height: 185px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateZ(35px);
+    }
+
+    .logo-image img {
+      max-width: 100%;
+      max-height: 170px;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 12px #0009);
+      transition: transform 0.4s ease;
+    }
+
+    .logo-card:hover .logo-image img {
+      transform: scale(1.07);
+    }
+
+    .logo-name {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      transform: translateZ(20px);
+    }
+
+    .logo-name span {
+      display: block;
+      margin-top: 7px;
+      color: #a9a39a;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #77716a;
+      border-top: 1px solid #ffffff15;
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .logo-card {
+        min-height: 260px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .gallery {
+        grid-template-columns: 1fr;
+        width: 84%;
+      }
+
+      .logo-card {
+        min-height: 300px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .logo-card,
+      .logo-image img {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="brand" href="index.html">SK.</a>
+    <a class="back-link" href="index.html#work">← BACK TO WORK</a>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">BRAND IDENTITY · SELECTED WORK</p>
+    <h1>Logo <span style="color:#d4af37">Studio.</span></h1>
+    <p class="subtitle">
+      Ideas transformed into memorable identities.
+    </p>
+  </section>
+
+  <main class="gallery">
+
+    <article class="logo-card">
+      <span class="number">01 / BRAND</span>
+      <div class="logo-image">
+        <img src="works/logo7 (9).png " alt="Logo design 1">
+      </div>
+      <h2 class="logo-name">
+        SK Monogram
+        <span>PERSONAL BRANDING</span>
+      </h2>
+    </article>
+
+    <article class="logo-card">
+      <span class="number">02 / BRAND</span>
+      <div class="logo-image">
+        <img src="works/logo2 (7).png" alt="Logo design 2">
+      </div>
+      <h2 class="logo-name">
+        Brand Concept 02
+        <span>LOGO DESIGN</span>
+      </h2>
+    </article>
+
+    <article class="logo-card">
+      <span class="number">03 / BRAND</span>
+      <div class="logo-image">
+        <img src="works/logo3 (3).png" alt="Logo design 3">
+      </div>
+      <h2 class="logo-name">
+        Brand Concept 03
+        <span>VISUAL IDENTITY</span>
+      </h2>
+    </article>
+
+    <article class="logo-card">
+      <span class="number">04 / BRAND</span>
+      <div class="logo-image">
+        <img src="works/logo4(4).png" alt="Logo design 4">
+      </div>
+      <h2 class="logo-name">
+        Brand Concept 04
+        <span>CREATIVE DESIGN</span>
+      </h2>
+    </article>
+    <article class="logo-card">
+      <span class="number">05 / BRAND</span>
+      <div class="logo-image">
+        <img src="works/logo5 (5).png" alt="Logo design 1">
+      </div>
+      <h2 class="logo-name">
+        Brand Concept 05
+        <span>PERSONAL IDENTITY</span>
+      </h2>
+    </article>
+
+    <article class="logo-card">
+      <span class="number">06 / BRAND</span>
+      <div class="logo-image">
+        <img src="works/logo6 (6).png " alt="Logo design 2">
+      </div>
+      <h2 class="logo-name">
+        Brand Concept 06
+        <span>CREATIVE IDENTITY</span>
+      </h2>
+    </article>
+
+    <article class="logo-card">
+      <span class="number">07 / BRAND</span>
+      <div class="logo-image">
+        <img src="works/logo1 (2).png  " alt="Logo design 3">
+      </div>
+      <h2 class="logo-name">
+        Brand Concept 07
+        <span>BRAND IDENTITY</span>
+      </h2>
+    </article>
+
+  </main>
+
+  <footer>
+    DESIGNED BY SRINIVASAN · LOGO STUDIO
+  </footer>
+</body>
+</html>
